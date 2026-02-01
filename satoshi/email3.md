@@ -1,107 +1,41 @@
+| 03 May 2009 23:32:26
+
+* Satoshi's next feature
+  * escrow 
+    * == 
+      * keep & blocked transaction's coind | special address
+      * | meet conditions OR sign MULTIPLE -> share the money
+
+* "(not accepted)" issue 
+  * goal
+    * being reduced | v0.1.6
+
+* FAQ 
+  * 's goal
+    * ONLY general simple repeated questions
+  * why to set up your firewall / forward port 8333?
+    * enable you receive incoming connections
+    * OTHERWISE, only to send
+  * | UI's 
+    * bottom appear: Generating, 4 connections, 4024 blocks, 164 transactions
+      * number of transactions == recorded transactions (even failed generation attempts)
+      * blocks
+        * == total number of blocks | block chain
+          * -> display the SAME number | ALL network
+          * if someone generates a block -> goes up
+          * if your node has been disconnected & you connect your node -> download what was generated
+    * status column / next to your transactions
+      * blocks number OR confirmations
+        * == number of blocks / have come AFTER that transaction
+    * sync status bar
+      * == progress | download ALL transactions
+        * | start, fast
+          * Reason: less transactions & MORE simple
+        * | right now, slow
+          * Reason: MORE transactions, MORE complex
+
+
 * TODO: 
-<pre>mmalmi@cc.hut.fi wrote:
-&gt; All right, I can do the website and the FAQ. I&#39;ll start writing the FAQ 
-&gt; now with the questions that I can think of.
-
-That would be great!  I added you (dmp1ce) as a dev to the sourceforge 
-project and gave you access to edit the web space and everything.
-
-
-&gt; I have a feature suggestion for the program: a UI tool for creating 
-&gt; password protected private keys and saving them into a custom location. 
-&gt; Backups of the key will be needed to be safe from losing the control of 
-&gt; your coins, and for using the coins on more than one computers. Password 
-&gt; protection would be needed to make using your money more difficult for 
-&gt; someone who happens to find your key file.
-
-Definitely.  This will be an absolutely essential feature once things 
-get going, making it so you can lock your wealth up with strong 
-encryption and back it up more securely than any physical safe.  So far 
-I&#39;ve been putting it off in favour of other features because it&#39;s not 
-crucial yet until bitcoins start to have value.
-
-I plan to work on the escrow feature next, which is needed to make 
-actual trades for physical stuff safer and before backing the currency 
-with fiat money can begin.
-
-
-&gt; I&#39;m running a bitcoin node always when my PC is powered on, which means 
-&gt; about 24/7. Bitcoin is a great project, and it&#39;s really cool to 
-&gt; participate!
-
-Thanks!  Right now there are a lot of people on the network who can&#39;t 
-receive incoming connections, so every node that can really helps. 
-Having more helps keep down the &#34;(not accepted)&#34; issue for now until I 
-reduce the chances of that happening in v0.1.6.
-
-I guess one answer for the FAQ should be how to set up your firewall to 
-forward port 8333 so you can receive incoming connections.  The question 
-could be something like &#34;what if I have 0 connections&#34; and that could be 
-the answer that it might be because the nodes you can connect with is 
-limited if you don&#39;t set that up.
-
-Here&#39;s a compilation of questions I&#39;ve answered in forums and e-mail 
-that should help you see what questions are frequently asked and some 
-answers I&#39;ve used.  It&#39;s not intended to use all or most of the material 
-here, just pick and choose.  This is just a dump of everything I&#39;ve 
-answered.
-
-Some issues that we don&#39;t have easy answers for are best not to bring 
-up.  Casual users seems content to assume that the system works as 
-stated (which it does), and getting into the design details just opens a 
-can of worms that can&#39;t be answered without a deep understanding of the 
-system.  The advanced questions I&#39;ve received have mostly been unique 
-per person and best answered individually.
-
-
-
-**** QUESTION AND ANSWER DUMP ****
-
-Any questions used for the FAQ should probably be rephrased.
-
-questions:
-
- &gt; The bottom of the UI shows:
- &gt;
- &gt; Generating        4 connections     4024 blocks     164 transactions
- &gt;
- &gt; I understand &#34;generating&#34;; I assume I am connected to 4 other nodes; and
- &gt; I know I have recorded 164 transactions (including failed generation
- &gt; attempts).  I&#39;m not clear what the &#34;blocks&#34; figure describes.  It&#39;s much
- &gt; smaller than the total of all the blocks shown against all my 
-transactions.
- &gt;
-
-It&#39;s the total number of blocks in the block chain, meaning the 
-network&#39;s block chain, which everyone has a copy of.  Every Bitcoin node 
-displays the same number and it goes up about every 10 minutes whenever 
-someone generates a block.  When you haven&#39;t had it running for a while, 
-once you&#39;re connected it spins up rapidly as it downloads what was 
-generated while you were gone to catch up.  I&#39;m not sure exactly how to 
-describe it (that would fit on the status bar in 1 word, maybe 2 words 
-max), any ideas?
-
-The blocks number in the status column next to your transactions is the 
-number of blocks that have come after that transaction.  Your 
-transaction is essentially &#34;in&#34; that many blocks.
-
-Satoshi
-
-
-
-
- &gt; My best guess - it
- &gt; is the length of the global chain, and the rapid advance at the start
- &gt; is as the software downloads and verifies the preceding blocks in the
- &gt; chain as being valid.
-
-Right.  I&#39;m trying to think of more clear wording for that, maybe &#34;%d 
-network blocks&#34; or &#34;%d block chain&#34;.
-
-
-
-
-
  &gt; I&#39;m having an unusual run of (block not-accepted) failures, and 
 thought I&#39;d let you know in
  &gt; case this was of any significance.
@@ -936,5 +870,3 @@ http://www.mail-archive.com/cryptography@metzdowd.com/mail2.html
 
 My description of how Bitcoin solves the Byzantine Generals&#39; problem:
 http://www.bitcoin.org/byzantine.html
-
-</pre>
