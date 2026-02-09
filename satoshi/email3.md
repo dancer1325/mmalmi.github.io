@@ -34,40 +34,17 @@
         * | right now, slow
           * Reason: MORE transactions, MORE complex
 
+* Problems:
+  * Problem1: | mining, you could get "(block not-accepted) failures"
+    * == mined blocks / NOT accepted | Bitcoin
+    * Possible Reason: 2 nodes find a block | ALMOST SAME time & ONLY 1! can be accepted -- by the -- network
+    * Solution
+      * | Bitcoin v0.1.6,
+        * | confirm blocks -> consider it -- as -- accepted
 
-* TODO: 
- &gt; I&#39;m having an unusual run of (block not-accepted) failures, and 
-thought I&#39;d let you know in
- &gt; case this was of any significance.
-
-What rate of not-accepted did you see?  I didn&#39;t see anything unusual on 
-my end.  If you had more than, say, 4 in a row, that would be abnormal 
-and probably a loss of network communication.  If it&#39;s scattered and 
-less than 25%, just random bad luck.  It&#39;s normal and harmless to 
-randomly get some per cent of not-accepted, and of course randomness can 
-sometimes bunch up and look like a pattern.
-
-The idea of an option to View/Hide unaccepted blocks is a good one, as 
-well as View/Hide all generated blocks so you can more easily see 
-incoming transactions.  Seeing the unaccepted blocks is just annoying 
-and frustrating.  Everyone faces the same rate of unaccepted, it&#39;s just 
-a part of the process.  It would probably be best to default to hide 
-unaccepted blocks, so as not to show giving and taking away something 
-that never was, and not show new generated blocks at all until they have 
-at least one confirmation.  It would only mean finding out you have a 
-generated block 15 minutes later than normal, and then you still have 
-119 blocks to go before it matures anyway.  This is on the to-do list 
-for v0.1.6.
-
-Satoshi
-
-[note: I have some improvements in 0.1.6 to reduce this problem somewhat,
-and it&#39;ll also improve when the network is larger]
-
-
-
-
-
+* confirm blocks
+  * == OTHER nodes confirm your block
+    * -> undisconnected nodes have cons
 
 
  &gt; For some reason your transfer to me shows up as &#34;From: unknown&#34; even
